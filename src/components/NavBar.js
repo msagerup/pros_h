@@ -12,6 +12,10 @@ export default function NavBar() {
                 <li>
                     <Link to='/pris'>Pris</Link>
                 </li>
+                <li>
+                <Link to='/hooks'>Hooks</Link>
+
+                </li>
             </ul>
 
         </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import NavBar from './components/NavBar'
+import HooksPlay from './components/HooksPlay'
 import Test from './components/Test'
 import Pris from './components/Pris'
 import {
@@ -21,8 +22,11 @@ function App() {
                 <Route path="/test"> 
                     <Test />
                 </Route>
-                <Route path='/pris/:abc'>
+                <Route path='/pris/:produktId'>
                     <Pris />
+                </Route>
+                <Route path='/hooks' >
+                    <HooksPlay />
                 </Route>
             </Switch>
         </Router>
