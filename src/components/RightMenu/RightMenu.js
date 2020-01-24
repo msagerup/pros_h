@@ -1,4 +1,6 @@
 import React, { Component, useState } from 'react'
+import { Link } from 'react-router-dom';
+
 import {
     Button,
     Checkbox,
@@ -15,7 +17,7 @@ const RightMenu = (props) => {
     const [menu, setMenu] = useState(false)
     console.log(menu)
     return (
-        <section style={{height: '100vh'}}>
+        <section style={{height: '60vh', paddingTop: '30px'}}>
      <Sidebar.Pushable as={Segment}>
       <Sidebar
         as={Menu}
@@ -27,20 +29,20 @@ const RightMenu = (props) => {
         visible={menu}
         width='thin'
       >
-        <Menu.Item as='a'>
+        <Menu.Item>
           <Icon name='home' />
-          Home
-        </Menu.Item>
-        <Menu.Item as='a'>
-          <Icon name='gamepad' />
+          <Link to="/pris">Pris</Link>
+          </Menu.Item>
+        <Menu.Item >
+          <Icon name='clipboard outline' />
+          <Link to="/hooks">Hooks</Link>
           Games
         </Menu.Item>
-        <Menu.Item as='a'>
+        <Menu.Item >
           <Icon name='camera' />
           Channels
         </Menu.Item>
       </Sidebar>
-
       <Sidebar.Pusher>
         {props.children}
       </Sidebar.Pusher>

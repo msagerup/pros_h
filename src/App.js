@@ -19,7 +19,7 @@ function App() {
     return (
         <Router>
             <NavBar />
-            <RightMenu>
+            <RightMenu> 
 
             <Switch>
                 <Route path="/test"> 
