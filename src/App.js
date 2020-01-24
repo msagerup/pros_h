@@ -1,5 +1,6 @@
 import React from 'react';
-import NavBar from './components/NavBar'
+import NavBar from './components/NavBar/NavBar'
+import RightMenu from './components/RightMenu/RightMenu'
 import HooksPlay from './components/HooksPlay'
 import Test from './components/Test'
 import Pris from './components/Pris'
@@ -18,6 +19,8 @@ function App() {
     return (
         <Router>
             <NavBar />
+            <RightMenu>
+
             <Switch>
                 <Route path="/test"> 
                     <Test />
@@ -29,6 +32,7 @@ function App() {
                     <HooksPlay />
                 </Route>
             </Switch>
+            </RightMenu>
         </Router>
     );
 }
