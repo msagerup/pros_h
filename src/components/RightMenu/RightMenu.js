@@ -17,7 +17,7 @@ const RightMenu = (props) => {
     const [menu, setMenu] = useState(false)
     console.log(menu)
     return (
-        <section style={{height: '60vh', paddingTop: '30px'}}>
+        <section style={{height: '60vh', paddingTop: '20px'}}>
      <Sidebar.Pushable as={Segment}>
       <Sidebar
         as={Menu}

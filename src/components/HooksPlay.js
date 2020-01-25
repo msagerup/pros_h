@@ -3,7 +3,7 @@ import PasstheState from './PassTheState'
 
 
 export default function HooksPlay() {
-    const [count, test] = useState(8)
+    const [count, test] = useState(10)
     const [fruit, setFruit] = useState('Bannan')
     const [message, setMessage] = useState(null)
     
@@ -18,12 +18,9 @@ export default function HooksPlay() {
         document.title = fruit
     })
 
-
     function handleChange (navn) {
         console.log(`hello ${navn}`)
     }
-
-
 
     return (
         <>
@@ -32,7 +29,7 @@ export default function HooksPlay() {
             <p>This is message: {message}</p>
             <button onClick={() => test(count + 1)}>Click</button>
             <button onClick={() => test(`<h2>Hello</h2>`)}>Change to</button>
-            <button onClick={() => handleFruit()}>Change fruit name</button>
+            <button onClick={() => handleFruit()}>Change fruit nam,e</button>
             <PasstheState passBack = {handleChange} propText = 'hei' textState = {setMessage}/>
         </>
     )
