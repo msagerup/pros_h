@@ -22,8 +22,6 @@ export default function Home() {
    let history = useHistory();
    // const { toggleLogInnProcess, startLoginProcess } = useContext(AppContextData);
 
-  
-
 
    return (
       <>
