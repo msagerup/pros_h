@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { useHistory } from "react-router-dom";
 import styled from 'styled-components';
 import logoImg from './navlogo.jpg'
 import { AppContextData } from '../../Context/ContextData'
@@ -34,19 +35,19 @@ const MenuButton = styled.div`
 
 export default function NavBar() {
    const { toggleMenu, signedIn } = useContext(AppContextData)
+   const history = useHistory()
    return (
       <Nav>
          <Logo><img src={logoImg} alt="Logo" /></Logo>
          <Login>{signedIn ? (
             null
          ) : (
-               <button>Sign in</button>
+               <button onClick ={() => history.push('/login')}>Sign in</button>
             )}
          </Login>
          <MenuButton>
             <button onClick={() => toggleMenu()} > Menu P/H</button>
          </MenuButton>
-
       </Nav>
    )
 }

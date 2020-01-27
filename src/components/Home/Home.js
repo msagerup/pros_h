@@ -22,9 +22,7 @@ export default function Home() {
    let history = useHistory();
    // const { toggleLogInnProcess, startLoginProcess } = useContext(AppContextData);
 
-   function handleHistory() {
-      history.push('/login')
-   }
+  
 
 
    return (
@@ -41,7 +39,7 @@ export default function Home() {
             <Paper style={{ padding: '40px' }}>
                <h3>Logg inn!</h3>
                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus iusto totam perspiciatis aliquam voluptas, neque doloribus nam doloremque unde omnis sed porro temporibus commodi, aspernatur error eveniet nulla at cupiditate numquam assumenda autem facilis? Nihil in voluptatibus quibusdam mollitia doloribus?</p>
-               <Button onClick={handleHistory}>Logg In</Button>
+               <Button onClick={() => history.push('/login')}>Logg In</Button>
 
             </Paper>
          </SectionCallToAction>

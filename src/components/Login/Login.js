@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Step } from 'semantic-ui-react'
 import styled from 'styled-components';
 import FirstStep from './FirstStep'
@@ -20,8 +20,8 @@ export default function Login() {
                
             >
                <Step.Content>
-                  <Step.Title>Shipping</Step.Title>
-                  <Step.Description>Choose your shipping options</Step.Description>
+                  <Step.Title>RomService kode</Step.Title>
+                  <Step.Description>Fyll inn din rom id, eller scan QR bilde</Step.Description>
                </Step.Content>
             </Step>
 
@@ -31,8 +31,8 @@ export default function Login() {
                disabled={true}
             >
                <Step.Content>
-                  <Step.Title>Billing</Step.Title>
-                  <Step.Description>Enter billing information</Step.Description>
+                  <Step.Title>Meny</Step.Title>
+                  <Step.Description>Hva frister?</Step.Description>
                </Step.Content>
             </Step>
 
@@ -42,7 +42,9 @@ export default function Login() {
                disabled={true}
             >
                <Step.Content>
-                  <Step.Title>Confirm Order</Step.Title>
+                  <Step.Title>Fullfør</Step.Title>
+                  <Step.Description>Snart banker det på døren...</Step.Description>
+
                </Step.Content>
             </Step>
          </Step.Group>
