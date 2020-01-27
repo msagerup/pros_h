@@ -6,6 +6,7 @@ import Container from '@material-ui/core/Container';
 import HooksPlay from './components/HooksPlay';
 import Home from './components/Home/Home';
 import Pris from './components/Pris';
+import Context from './components/Context'
 import {
     BrowserRouter as Router,
     Switch,
@@ -30,19 +31,22 @@ function App() {
             <NavBar />
             <LeftMenu>
                 <Container>
-                <GridSection>
-                    <Switch>
-                        <Route path='/pris/:produktId'>
-                            <Pris />
-                        </Route>
-                        <Route path='/hooks' >
-                            <HooksPlay />
-                        </Route>
-                        <Route exact path='/' >
-                            <Home />
-                        </Route>
-                    </Switch>
-                </GridSection>
+                    <GridSection>
+                        <Switch>
+                            <Route path='/pris/:produktId'>
+                                <Pris />
+                            </Route>
+                            <Route path='/hooks' >
+                                <HooksPlay />
+                            </Route>
+                            <Route path='/play'>
+                                <Context />
+                            </Route>
+                            <Route exact path='/' >
+                                <Home />
+                            </Route>
+                        </Switch>
+                    </GridSection>
                 </Container>
             </LeftMenu>
         </Router>
