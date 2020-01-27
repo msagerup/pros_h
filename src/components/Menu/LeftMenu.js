@@ -1,23 +1,22 @@
-import React, { Component, useState } from 'react'
+import React, { Component, useState, useContext } from 'react'
+import {AppContextData} from '../../Context/ContextData'
 import { Link } from 'react-router-dom';
 
 import {
-   Button,
-   Checkbox,
-   Grid,
-   Header,
    Icon,
-   Image,
    Menu,
    Segment,
    Sidebar,
 } from 'semantic-ui-react'
 
 const LeftMenu = (props) => {
+   const {menuOpen} = useContext(AppContextData)
    const [menu, setMenu] = useState(false)
-   console.log(menu)
+   // console.log(toggleMenu)
+
+
    return (
-      <section style={{ height: '85vh', paddingTop: '20px' }}>
+      <section style={{ height: '100vh', paddingTop: '20px' }}>
          <Sidebar.Pushable as={Segment}>
             <Sidebar
                as={Menu}
@@ -26,18 +25,20 @@ const LeftMenu = (props) => {
                inverted
                // onHide={() => setVisible(false)}
                vertical
-               visible={menu}
+               visible={menuOpen}
                width='thin'
             >
                <Menu.Item>
                   <Link to="/">
                      <Icon name='home' />
-                     Hjem</Link>
+                     Hjem
+                  </Link>
                </Menu.Item>
                <Menu.Item >
                   <Icon name='clipboard outline' />
-                  <Link to="/hooks">Hooks</Link>
-                  Games
+                  <Link to="/hooks">Hooks
+                  </Link>
+                  
         </Menu.Item>
                <Menu.Item >
                   <Icon name='camera' />
@@ -48,8 +49,6 @@ const LeftMenu = (props) => {
                {props.children}
             </Sidebar.Pusher>
          </Sidebar.Pushable>
-
-         <button onClick={() => setMenu(!menu)}>hello</button>
       </section>
    )
 }

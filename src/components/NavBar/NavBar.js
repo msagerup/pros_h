@@ -1,14 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
 import logoImg from './navlogo.jpg'
+import { AppContextData } from '../../Context/ContextData'
 import { Link } from 'react-router-dom';
 
 const Nav = styled.nav`
     height: 100px;
     padding: 10px 20px 10px 20px;
-    color: white;
+    /* color: white; */
     display: grid;
-    grid-template-columns: 100px auto 40px;
+    grid-template-columns: 400px auto 100px 100px;
     grid-template-rows: 1fr;
     box-shadow: 0 4px 5px -2px rgba(0,0,0,.2);
 `
@@ -19,19 +20,33 @@ const Logo = styled.div`
         height: 40px;
     }
 `
-const Login = styled.div `
+const Login = styled.div`
     font-size: 1rem;
     grid-column: 3 /4;
     align-self: center;
     color: #3d3d3d;
 `
+const MenuButton = styled.div`
+   grid-column: 4/5;
+   align-self: center;
+
+`
 
 export default function NavBar() {
-    return (
-        <Nav>
-           <Logo><img src={logoImg} alt="Logo"/></Logo>
-                <Login>Login</Login>
-           
-        </Nav>
-    )
+   const { toggleMenu, signedIn } = useContext(AppContextData)
+   return (
+      <Nav>
+         <Logo><img src={logoImg} alt="Logo" /></Logo>
+         <Login>{signedIn ? (
+            null
+         ) : (
+               <button>Sign in</button>
+            )}
+         </Login>
+         <MenuButton>
+            <button onClick={() => toggleMenu()} > Menu P/H</button>
+         </MenuButton>
+
+      </Nav>
+   )
 }

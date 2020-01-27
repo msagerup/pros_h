@@ -50,7 +50,7 @@ function Baby() {
 }
 
 // pretent this is app
-class Context extends Component {
+class PlayPin extends Component {
    render() {
       return (
          <MyProvider>
@@ -60,4 +60,4 @@ class Context extends Component {
    }
 }
 
-export default Context;
+export default PlayPin;

@@ -1,25 +1,51 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { useHistory } from "react-router-dom";
+import Login from '../Login/Login'
+import { AppContextData } from '../../Context/ContextData'
+import Paper from '@material-ui/core/Paper';
+import { Button } from 'semantic-ui-react';
+
+
 import styled from 'styled-components';
 
-import Container from '@material-ui/core/Container';
+const Header = styled.header`
+   grid-column: 2/4;
+`
+const SectionCallToAction = styled.section`
+   margin: 30px 0px 30px 0px;
+   grid-column: 2/4;
 
-const GridSection = styled.section`
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    padding-top: 50px;
 `
 
+
 export default function Home() {
-    return (
-        <>
-            
-                <div className="one">one</div>
-                <div className="two">two</div>
-                <div className="three">three</div>
-                <div className="four">four</div>
-        
-        </>
-       
-    )
+   let history = useHistory();
+   // const { toggleLogInnProcess, startLoginProcess } = useContext(AppContextData);
+
+   function handleHistory() {
+      history.push('/login')
+   }
+
+
+   return (
+      <>
+         <Header>
+            <Paper style={{ padding: '40px' }}>
+
+               <h1>RoomService i din lomme</h1>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quas praesentium similique numquam nam ullam enim, iure suscipit itaque doloribus quis debitis harum voluptate dignissimos odio aliquam ducimus voluptates corrupti labore qui quibusdam! Reprehenderit expedita tempora repudiandae laudantium sed commodi non perferendis optio ullam quasi.</p>
+
+            </Paper>
+         </Header>
+         <SectionCallToAction>
+            <Paper style={{ padding: '40px' }}>
+               <h3>Logg inn!</h3>
+               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus iusto totam perspiciatis aliquam voluptas, neque doloribus nam doloremque unde omnis sed porro temporibus commodi, aspernatur error eveniet nulla at cupiditate numquam assumenda autem facilis? Nihil in voluptatibus quibusdam mollitia doloribus?</p>
+               <Button onClick={handleHistory}>Logg In</Button>
+
+            </Paper>
+         </SectionCallToAction>
+      </>
+
+   )
 }
