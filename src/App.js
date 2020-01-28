@@ -1,5 +1,5 @@
 import React from 'react';
-import {ContextDataProvider} from './Context/ContextData';
+import { ContextDataProvider } from './Context/ContextData';
 import NavBar from './components/NavBar/NavBar';
 import LeftMenu from './components/Menu/LeftMenu';
 import styled from 'styled-components';
@@ -9,6 +9,12 @@ import Home from './components/Home/Home';
 import Login from './components/Login/Login';
 import Pris from './components/Pris';
 import PlayPin from './components/PlayPin'
+import PageNotFound from './components/404/PageNotFount'
+
+// SubRutes of signin
+import FirstStep from './components/Login/FirstStep'
+
+
 import {
    BrowserRouter as Router,
    Switch,
@@ -16,6 +22,7 @@ import {
 } from "react-router-dom";
 
 import './App.css';
+import SecondStep from './components/Login/SecondStep';
 
 
 //Css grid styling
@@ -46,10 +53,12 @@ function App() {
                            <PlayPin />
                         </Route>
                         <Route path='/login'>
-                           <Login />                        </Route>
+                           <Login />
+                        </Route>
                         <Route exact path='/' >
                            <Home />
                         </Route>
+                        <Route path="*" component={PageNotFound} />
                      </Switch>
                   </GridSection>
                </Container>
