@@ -18,7 +18,7 @@ const Logo = styled.div`
     grid-column: 1 /2;
     align-self: center;
     img {
-        height: 18px;
+        height: 10px;
     }
 `
 const Login = styled.div`

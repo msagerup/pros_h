@@ -1,12 +1,10 @@
 import React, { useContext } from 'react'
 import { useHistory } from "react-router-dom";
-import Login from '../Login/Login'
 import { AppContextData } from '../../Context/ContextData'
-import Paper from '@material-ui/core/Paper';
-import { Card, Icon, Image } from 'semantic-ui-react'
-import { Button } from 'semantic-ui-react';
 
-//image 
+import { Card, Image, Button } from 'semantic-ui-react'
+
+//images
 import hotelStreet from './img/hotelStreet.jpg'
 import hotelDay from './img/hotelDay.jpg'
 import hotelNight from './img/hotelNight.jpg'
@@ -31,7 +29,7 @@ export default function Home() {
       <>
          <Header>
             <Card fluid>
-               <Image src={hotelStreet} wrapped ui={false} />
+               <Image src={hotelStreet} wrapped ui={false}ui={false} />
                <Card.Content>
                   <Card.Header>Velkommen! Håper du får et flott opphold ved ditt hotell.</Card.Header>
                   <Card.Meta>[Grand Hotel Oslo]</Card.Meta>

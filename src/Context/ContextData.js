@@ -10,6 +10,7 @@ const AppContextData = React.createContext();
         signedIn: false,
         age: 33,
         startLoginProcess: false,
+        activeStepper: null
     }
     render() {
         return (

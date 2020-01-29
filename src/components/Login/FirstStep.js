@@ -1,34 +1,42 @@
 import React, { Component } from 'react'
-import { Button, Form, Message, Card } from 'semantic-ui-react'
+import { Button, Card, Image, Form } from 'semantic-ui-react'
+import { useHistory } from "react-router-dom";
+
 import styled from 'styled-components';
+import firstStepImg from './img/firstStep.jpg'
+import eat from './img/eat.jpg'
 
 const FirsStepContainer = styled.section`
    grid-column: 2/4;
    padding-top: 60px;
 `
 
-export default class FirstStep extends Component {
-   render() {
-      return (
-         <FirsStepContainer>
-            <Card color="green">
-               <h2>Hello</h2>
-            </Card>
+export default function FirstStep() {
+   let history = useHistory()
 
-
-
-
-         {/* <Form success>
-            <Form.Input label='RomService Kode' placeholder='4  siffret kode' />
-            <Message
-               success
-               header='Riktig Kode!'
-               content="Trykk neste for å se meny valg ved [ insert hotel name logic ] "
-
-            />
-            <Button onClick={() => console.log('this needs to go somewhere...')}>Neste</Button>
-         </Form> */}
-         </FirsStepContainer>
-      )
-   }
+   return (
+      <FirsStepContainer>
+         <Card fluid>
+            <Image src={eat} size="large" wrapped ui={false} />
+            <Card.Content>
+               <Card.Header>Du er kun 3 steg fra at det banker på døren!</Card.Header>
+               <Card.Meta>[Grand Hotel Oslo]</Card.Meta>
+               <Card.Description>
+                  <h3>Første steg blir å skrive inn koden.</h3>
+                  <p>Du finner koden på bordet i dit rom, du skulle også fått denne ved insjekking. Vennligst skriv inn denne koden i feltet nedenfor og trykk så på knappen for å komme til menyen</p>
+                  <Form style={{padding: '30px 0px 30px 0px'}}>
+                     <Form.Input
+                        // error={{ content: 'Please enter your first name', pointing: 'below' }}
+                        fluid
+                        label='Kode'
+                        placeholder='Skriv inn koden din her'
+                        id='form-input-first-name'
+                     />
+                  </Form>
+                  <Button onClick={() => history.push('/login/menu')}>Neste</Button>
+               </Card.Description>
+            </Card.Content>
+         </Card>
+      </FirsStepContainer>
+   )
 }
