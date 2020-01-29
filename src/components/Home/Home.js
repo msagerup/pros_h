@@ -3,7 +3,13 @@ import { useHistory } from "react-router-dom";
 import Login from '../Login/Login'
 import { AppContextData } from '../../Context/ContextData'
 import Paper from '@material-ui/core/Paper';
+import { Card, Icon, Image } from 'semantic-ui-react'
 import { Button } from 'semantic-ui-react';
+
+//image 
+import hotelStreet from './img/hotelStreet.jpg'
+import hotelDay from './img/hotelDay.jpg'
+import hotelNight from './img/hotelNight.jpg'
 
 
 import styled from 'styled-components';
@@ -16,8 +22,6 @@ const SectionCallToAction = styled.section`
    grid-column: 2/4;
 
 `
-
-
 export default function Home() {
    let history = useHistory();
    // const { toggleLogInnProcess, startLoginProcess } = useContext(AppContextData);
@@ -26,20 +30,32 @@ export default function Home() {
    return (
       <>
          <Header>
-            <Paper style={{ padding: '40px' }}>
-
-               <h1>RoomService i din lomme</h1>
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quas praesentium similique numquam nam ullam enim, iure suscipit itaque doloribus quis debitis harum voluptate dignissimos odio aliquam ducimus voluptates corrupti labore qui quibusdam! Reprehenderit expedita tempora repudiandae laudantium sed commodi non perferendis optio ullam quasi.</p>
-
-            </Paper>
+            <Card fluid>
+               <Image src={hotelStreet} wrapped ui={false} />
+               <Card.Content>
+                  <Card.Header>Velkommen! Håper du får et flott opphold ved ditt hotell.</Card.Header>
+                  <Card.Meta>[Grand Hotel Oslo]</Card.Meta>
+                  <Card.Description>
+                     <h3>PalmBar er en brukervennlig måte du nå kan bestille roomservice til ditt hotelroom. Ved 3 enkle steg er du igang. Alt du trenger er login kode for å begynne</h3>
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, consequatur obcaecati quae exercitationem ullam, magni eveniet sequi commodi corporis eos alias! Blanditiis esse deleniti, illum, repellat quo assumenda laudantium amet vel sit eveniet maxime, dicta nisi nihil quia neque quisquam!</p>
+                  </Card.Description>
+               </Card.Content>
+            </Card>
          </Header>
-         <SectionCallToAction>
-            <Paper style={{ padding: '40px' }}>
-               <h3>Logg inn!</h3>
-               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus iusto totam perspiciatis aliquam voluptas, neque doloribus nam doloremque unde omnis sed porro temporibus commodi, aspernatur error eveniet nulla at cupiditate numquam assumenda autem facilis? Nihil in voluptatibus quibusdam mollitia doloribus?</p>
-               <Button onClick={() => history.push('/login')}>Logg In</Button>
 
-            </Paper>
+
+         <SectionCallToAction>
+         <Card fluid>
+               <Image src={hotelDay} wrapped ui={false} />
+               <Card.Content>
+                  <Card.Header>Bestill roomService!</Card.Header>
+                  <Card.Meta>[Room Service er tillgnenelig for ditt hotell]</Card.Meta>
+                  <Card.Description>
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta repudiandae doloribus possimus vitae, adipisci incidunt repellat minima deserunt exercitationem nesciunt?</p>
+                     <Button onClick={() => history.push('/login')}>Bestill nå</Button>
+                  </Card.Description>
+               </Card.Content>
+            </Card>
          </SectionCallToAction>
       </>
 

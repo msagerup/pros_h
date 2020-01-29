@@ -10,7 +10,7 @@ const Nav = styled.nav`
     padding: 10px 20px 10px 20px;
     /* color: white; */
     display: grid;
-    grid-template-columns: 400px auto 100px 100px;
+    grid-template-columns: 1fr auto 100px 100px;
     grid-template-rows: 1fr;
     box-shadow: 0 4px 5px -2px rgba(0,0,0,.2);
 `
@@ -18,7 +18,7 @@ const Logo = styled.div`
     grid-column: 1 /2;
     align-self: center;
     img {
-        height: 40px;
+        height: 18px;
     }
 `
 const Login = styled.div`

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Button, Form, Message } from 'semantic-ui-react'
+import { Button, Form, Message, Card } from 'semantic-ui-react'
 import styled from 'styled-components';
 
 const FirsStepContainer = styled.section`
@@ -11,7 +11,14 @@ export default class FirstStep extends Component {
    render() {
       return (
          <FirsStepContainer>
-         <Form success>
+            <Card color="green">
+               <h2>Hello</h2>
+            </Card>
+
+
+
+
+         {/* <Form success>
             <Form.Input label='RomService Kode' placeholder='4  siffret kode' />
             <Message
                success
@@ -20,7 +27,7 @@ export default class FirstStep extends Component {
 
             />
             <Button onClick={() => console.log('this needs to go somewhere...')}>Neste</Button>
-         </Form>
+         </Form> */}
          </FirsStepContainer>
       )
    }

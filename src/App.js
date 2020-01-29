@@ -10,6 +10,7 @@ import Login from './components/Login/Login';
 import Pris from './components/Pris';
 import PlayPin from './components/PlayPin'
 import PageNotFound from './components/404/PageNotFount'
+import './App.css';
 
 // SubRutes of signin
 import FirstStep from './components/Login/FirstStep'
@@ -21,18 +22,17 @@ import {
    Route,
 } from "react-router-dom";
 
-import './App.css';
-import SecondStep from './components/Login/SecondStep';
-
-
 //Css grid styling
 const GridSection = styled.section`
     display: grid;
     grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
     grid-template-rows: auto;
     padding-top: 50px;
-`
+    @media (max-width:480px) {
+      grid-template-columns: 1fr;
 
+    }
+`
 
 function App() {
    return (
