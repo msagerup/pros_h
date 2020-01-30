@@ -1,4 +1,6 @@
-import React from 'react'
+import React, {useContext} from 'react'
+import { AppContextData } from '../../Context/ContextData'
+
 import { useHistory } from "react-router-dom";
 import styled from 'styled-components';
 import menuImg from './img/menu.jpg'
@@ -13,6 +15,7 @@ const SecondStepContainer = styled.section`
 
 export default function SecondStep() {
    let history = useHistory()
+   const {updateStepper} = useContext(AppContextData)
    return (
       <>
          <SecondStepContainer>
@@ -26,7 +29,11 @@ export default function SecondStep() {
                      <p>Dette er super enkelt, du markere hva du har lyst på, så trykker du på knappen for å komme videre til bekreftelse siden.</p>
                      </Card.Description>
                      <MenuLoader />
-                     <Button onClick={() => history.push('/login/done')}>Neste</Button>
+                     <Button onClick={() => {
+                        history.push('/login/done')
+                        updateStepper(2)
+                        
+                     } }>Neste</Button>
                   
                </Card.Content>
             </Card>

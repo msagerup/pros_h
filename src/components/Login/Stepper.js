@@ -1,15 +1,21 @@
-import React, {useContext} from 'react'
+import React, {useContext, useState} from 'react'
 import { Step } from 'semantic-ui-react'
+import { AppContextData } from '../../Context/ContextData'
 
 
-export default function Stepper() {
+export default function Stepper(props) {
+   const {activeStepper, updateStepper } = useContext(AppContextData);
+   
+   console.log(activeStepper)
+
    return (
       <>
          <Step.Group fluid  size='mini'>
             <Step
                completed={false}
-               active={true}
-               // title = 'first-step'
+               active={activeStepper === 0}
+               onClick={() => updateStepper(0)}
+               link
             >
                <Step.Content>
                   <Step.Title>RomService kode</Step.Title>
@@ -18,10 +24,11 @@ export default function Stepper() {
             </Step>
 
             <Step
-               completed={false}
-               active={false}
-               disabled={true}
-              
+               active={activeStepper === 1}
+               onClick={() => updateStepper(1)}
+               disabled={activeStepper < 1}
+               link
+
             >
                <Step.Content>
                   <Step.Title>Meny</Step.Title>
@@ -30,11 +37,10 @@ export default function Stepper() {
             </Step>
 
             <Step
-               completed={false}
-               active={false}
-               disabled={true}
-               
-
+               disabled={activeStepper < 2}
+               onClick={() => updateStepper(2)}
+               active={activeStepper === 2}
+               link
             >
                <Step.Content>
                   <Step.Title>Fullfør</Step.Title>

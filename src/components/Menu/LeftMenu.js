@@ -1,4 +1,4 @@
-import React, { Component, useState, useContext } from 'react'
+import React, {  useState, useContext } from 'react'
 import {AppContextData} from '../../Context/ContextData'
 import { Link } from 'react-router-dom';
 
@@ -11,12 +11,9 @@ import {
 
 const LeftMenu = (props) => {
    const {menuOpen} = useContext(AppContextData)
-   const [menu, setMenu] = useState(false)
-   // console.log(toggleMenu)
-
 
    return (
-      <section style={{ height: '100vh', paddingTop: '20px' }}>
+      <section style={{ paddingTop: '15px' }}>
          <Sidebar.Pushable as={Segment}>
             <Sidebar
                as={Menu}

@@ -14,9 +14,6 @@ import PlayPin from './components/PlayPin'
 import PageNotFound from './components/404/PageNotFount'
 import './App.css';
 
-// SubRutes of signin
-import FirstStep from './components/Login/FirstStep'
-
 
 import {
    BrowserRouter as Router,
@@ -66,16 +63,48 @@ function App() {
                </Container>
             </LeftMenu>
             <Footer
+               theme ="light"
                columns={[
                   {
-                     icon: (
-                        <img src="https://gw.alipayobjects.com/zos/rmsportal/XuVpGqBFxXplzvLjJBZB.svg" />
-                     ),
-                     title: '语雀',
-                     url: 'https://yuque.com',
-                     description: '知识创作与分享工具',
-                     openExternal: true,
+                    title: '相关资源',
+                    items: [
+                      {
+                        title: 'Ant Design Pro',
+                        url: 'https://pro.ant.design/',
+                        openExternal: true,
+                      },
+                      {
+                        title: 'Ant Design Mobile',
+                        url: 'https://mobile.ant.design/',
+                        openExternal: true,
+                      },
+                      {
+                        title: 'Kitchen',
+                        url: 'https://kitchen.alipay.com/',
+                        description: 'Sketch 工具集',
+                      },
+                    ],
                   },
+                  {
+                    title: '社区',
+                    items: [
+                      {
+                        title: 'Ant Design Pro',
+                        url: 'https://pro.ant.design/',
+                        openExternal: true,
+                      },
+                      {
+                        title: 'Ant Design Mobile',
+                        url: 'https://mobile.ant.design/',
+                        openExternal: true,
+                      },
+                      {
+                        title: 'Kitchen',
+                        url: 'https://kitchen.alipay.com/',
+                        description: 'Sketch 工具集',
+                      }
+                    ]
+                  }
                ]}
                
             />

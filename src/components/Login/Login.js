@@ -18,13 +18,13 @@ const StatusBar = styled.div`
 
 `
 
-export default function Login(props) {
-   console.log(props)
+export default function Login() {
    return (
       <>
          <Router>
             <StatusBar>
                <Stepper />
+               
             </StatusBar>
             <Switch>
             <Route exact path='/login/'>

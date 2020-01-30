@@ -1,6 +1,8 @@
-import React, { Component } from 'react'
+import React, { useContext } from 'react'
 import { Button, Card, Image, Form } from 'semantic-ui-react'
 import { useHistory } from "react-router-dom";
+import { AppContextData } from '../../Context/ContextData'
+
 
 import styled from 'styled-components';
 import firstStepImg from './img/firstStep.jpg'
@@ -13,6 +15,7 @@ const FirsStepContainer = styled.section`
 
 export default function FirstStep() {
    let history = useHistory()
+   const {updateStepper} = useContext(AppContextData)
 
    return (
       <FirsStepContainer>
@@ -33,7 +36,11 @@ export default function FirstStep() {
                         id='form-input-first-name'
                      />
                   </Form>
-                  <Button onClick={() => history.push('/login/menu')}>Neste</Button>
+                  <Button onClick={() => {
+                     history.push('/login/menu')
+                     updateStepper(1)
+                  }
+                  }>Neste</Button>
                </Card.Description>
             </Card.Content>
          </Card>

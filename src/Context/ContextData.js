@@ -6,11 +6,11 @@ const AppContextData = React.createContext();
  class ContextDataProvider extends Component {
     state = {
         menuOpen: false,
-        name: 'magnus',
         signedIn: false,
-        age: 33,
         startLoginProcess: false,
-        activeStepper: null
+        activeStepper: 0,
+        enableSecondStep: false,
+        enableThirStep: false
     }
     render() {
         return (
@@ -25,6 +25,14 @@ const AppContextData = React.createContext();
                     this.setState({
                         startLoginProcess: bool
                     })
+                },
+                updateStepper: (val) => {
+                    this.setState({
+                        activeStepper: val
+                    })
+                },
+                toggleSecondStep: () => {
+
                 }
             }}>
                 {this.props.children}
