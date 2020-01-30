@@ -2,7 +2,10 @@ import React, { useContext } from 'react'
 import { useHistory } from "react-router-dom";
 import { AppContextData } from '../../Context/ContextData'
 
+import styled from 'styled-components';
 import { Card, Image, Button } from 'semantic-ui-react'
+// LazyLoader
+import LazyLoad from 'react-lazyload';
 
 //images
 import hotelStreet from './img/hotelStreet.jpg'
@@ -10,7 +13,6 @@ import hotelDay from './img/hotelDay.jpg'
 import hotelNight from './img/hotelNight.jpg'
 
 
-import styled from 'styled-components';
 
 const Header = styled.header`
    grid-column: 2/4;
@@ -27,9 +29,13 @@ export default function Home() {
 
    return (
       <>
+
          <Header>
             <Card fluid>
-               <Image src={hotelStreet} wrapped ui={false}ui={false} />
+               {/* Does lazyload work ? */}
+               <LazyLoad height={200}>
+                  <Image src={hotelStreet} wrapped ui={false} />
+               </LazyLoad>
                <Card.Content>
                   <Card.Header>Velkommen! Håper du får et flott opphold ved ditt hotell.</Card.Header>
                   <Card.Meta>[Grand Hotel Oslo]</Card.Meta>
@@ -43,7 +49,7 @@ export default function Home() {
 
 
          <SectionCallToAction>
-         <Card fluid>
+            <Card fluid>
                <Image src={hotelDay} wrapped ui={false} />
                <Card.Content>
                   <Card.Header>Bestill roomService!</Card.Header>
@@ -55,6 +61,7 @@ export default function Home() {
                </Card.Content>
             </Card>
          </SectionCallToAction>
+
       </>
 
    )

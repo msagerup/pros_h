@@ -1,5 +1,7 @@
 import React from 'react';
 import { ContextDataProvider } from './Context/ContextData';
+import Footer from 'rc-footer';
+import 'rc-footer/assets/index.css';
 import NavBar from './components/NavBar/NavBar';
 import LeftMenu from './components/Menu/LeftMenu';
 import styled from 'styled-components';
@@ -63,6 +65,20 @@ function App() {
                   </GridSection>
                </Container>
             </LeftMenu>
+            <Footer
+               columns={[
+                  {
+                     icon: (
+                        <img src="https://gw.alipayobjects.com/zos/rmsportal/XuVpGqBFxXplzvLjJBZB.svg" />
+                     ),
+                     title: '语雀',
+                     url: 'https://yuque.com',
+                     description: '知识创作与分享工具',
+                     openExternal: true,
+                  },
+               ]}
+               
+            />
          </Router>
       </ContextDataProvider>
    );
