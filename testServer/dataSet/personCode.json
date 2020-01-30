@@ -1,0 +1,23 @@
+[
+  {
+    "id": "12",
+    "code": "5a5f",
+    "reference": "Magnus Sagerup - Room 23",
+    "hotelID": "33",
+    "expire": "11-03-2020"
+  },
+  {
+    "id": "2",
+    "code": "87d4",
+    "reference": "Sujan Subas - Room 64",
+    "hotelID": "33",
+    "expire": "11-03-2020"
+  },
+  {
+    "id": "1",
+    "code": "87d5",
+    "reference": "Tore Sagerup - Room 44",
+    "hotelID": "55",
+    "expire": "11-03-2020"
+  }
+]

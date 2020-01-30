@@ -1,12 +1,29 @@
 const express = require('express');
-const {codes} = require('./dataSet/hotelData')
 const app = express();
+const { checkCode } = require('./helpers/helpers')
+// Middleware
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
+// console.log(hotels)
 
-console.log(codes)
 
-app.get('/api/hotel', function(req,res) {
-   res.send(codes)
+
+
+
+///////
+// GET Routes
+app.get('/api/hotel', (req, res) => {
+   res.send('ok')
 })
+///////
+// POST Routes
+app.post('/api/order/:code', async (req, res) => {
+   let code = req.params.code
+   // Check is provided code is valid/correct
+   const resFromCheckCode = await checkCode(code)
+   res.json(resFromCheckCode)
+})
+
 
 const port = 5000;
 app.listen(port, () => {

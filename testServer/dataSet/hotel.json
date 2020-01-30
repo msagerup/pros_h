@@ -1,0 +1,90 @@
+[
+  {
+    "id": "1",
+    "hotelID": "33",
+    "name": "Grand Hotel",
+    "menu": [
+      {
+        "drinks": [
+          {
+            "alcoholic": [
+              {
+                "brand": "Carlsberg 0.33 ",
+                "type": "beer",
+                "price": "45",
+                "imgUrl": ""
+              },
+              {
+                "brand": "Borg 0.33",
+                "type": "beer",
+                "pris": "48",
+                "imgUrl": ""
+              }
+            ],
+            "nonAlcoholic": [
+              {
+                "brand": "Coca Cola 0.5 ",
+                "price": "25",
+                "imgUrl": ""
+              },
+              {
+                "brand": "Coca Cola 1 ",
+                "price": "45",
+                "imgUrl": ""
+              },
+              {
+                "brand": "Coca Cola 2.5 ",
+                "price": "85",
+                "imgUrl": ""
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "hotelID": "55",
+    "name": "Oslo Plaza",
+    "menu": [
+      {
+        "drinks": [
+          {
+            "alcoholic": [
+              {
+                "brand": "Carlsberg 0.33 ",
+                "type": "beer",
+                "price": "55",
+                "imgUrl": ""
+              },
+              {
+                "brand": "Borg 0.33",
+                "type": "beer",
+                "pris": "65",
+                "imgUrl": ""
+              }
+            ],
+            "nonAlcoholic": [
+              {
+                "brand": "Coca Cola 0.5 ",
+                "price": "20",
+                "imgUrl": ""
+              },
+              {
+                "brand": "Coca Cola 1 ",
+                "price": "35",
+                "imgUrl": ""
+              },
+              {
+                "brand": "Coca Cola 2.5 ",
+                "price": "75",
+                "imgUrl": ""
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
