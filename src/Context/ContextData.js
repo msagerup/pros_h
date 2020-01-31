@@ -10,7 +10,9 @@ const AppContextData = React.createContext();
         startLoginProcess: false,
         activeStepper: 0,
         enableSecondStep: false,
-        enableThirStep: false
+        enableThirStep: false,
+        menuAndPersonInfo: '',
+        testdata: 'magnus'
     }
     render() {
         return (
@@ -31,8 +33,10 @@ const AppContextData = React.createContext();
                         activeStepper: val
                     })
                 },
-                toggleSecondStep: () => {
-
+                savePersonAndMenuInfo: (obj) => {
+                    this.setState({
+                        menuAndPersonInfo: obj
+                    })
                 }
             }}>
                 {this.props.children}

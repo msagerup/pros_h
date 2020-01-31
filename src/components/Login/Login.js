@@ -30,10 +30,10 @@ export default function Login() {
             <Route exact path='/login/'>
                   <FirstStep />
                </Route>
-               <Route path='/login/menu'>
+               <Route path='/login/menu/:code'>
                   <SecondStep />
                </Route>
-               <Route path='/login/done'>
+               <Route path='/login/done/:code'>
                   <ThirdStep />
                </Route>
             </Switch>

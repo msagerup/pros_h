@@ -5,9 +5,6 @@ import { AppContextData } from '../../Context/ContextData'
 
 export default function Stepper(props) {
    const {activeStepper, updateStepper } = useContext(AppContextData);
-   
-   console.log(activeStepper)
-
    return (
       <>
          <Step.Group fluid  size='mini'>
