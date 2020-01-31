@@ -7,7 +7,6 @@ import { AppContextData } from '../../Context/ContextData'
 
 export default function Stepper(props) {
    const {activeStepper, updateStepper } = useContext(AppContextData);
-<<<<<<< HEAD
    let history = useHistory()
 
    // Update active click element, and route to correct view.
@@ -18,8 +17,6 @@ export default function Stepper(props) {
    }
    
 
-=======
->>>>>>> 50677562490f044afd81ff8ce2e5f833288fe937
    return (
       <>
          <Step.Group fluid  size='mini'>

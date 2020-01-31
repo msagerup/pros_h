@@ -57,16 +57,6 @@ export default function SecondStep() {
                   <Card.Description>
                      <h3>Nedefor finner du menyen fra [Hotell navn] </h3>
                      <p>Dette er super enkelt, du markere hva du har lyst på, så trykker du på knappen for å komme videre til bekreftelse siden.</p>
-<<<<<<< HEAD
-                     </Card.Description>
-                     <MenuLoader />
-                     <Button onClick={() => {
-                        history.push('/login/2')
-                        updateStepper(2)
-                        
-                     } }>Neste</Button>
-                  
-=======
                   </Card.Description>
                   <MenuLoader />
                   <Button onClick={() => {
@@ -75,7 +65,6 @@ export default function SecondStep() {
 
                   }}>Neste</Button>
 
->>>>>>> 50677562490f044afd81ff8ce2e5f833288fe937
                </Card.Content>
             </Card>
          </SecondStepContainer>
