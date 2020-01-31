@@ -1,9 +1,7 @@
 import React, { useContext } from 'react'
 import { Button, Card, Image, Form } from 'semantic-ui-react'
-import { useHistory } from "react-router-dom";
+import { useHistory} from "react-router-dom";
 import { AppContextData } from '../../Context/ContextData'
-
-
 import styled from 'styled-components';
 import firstStepImg from './img/firstStep.jpg'
 import eat from './img/eat.jpg'
@@ -16,6 +14,12 @@ const FirsStepContainer = styled.section`
 export default function FirstStep() {
    let history = useHistory()
    const {updateStepper} = useContext(AppContextData)
+
+
+   // Form handeler
+   function handleForm() {
+
+   }
 
    return (
       <FirsStepContainer>
@@ -32,6 +36,7 @@ export default function FirstStep() {
                         // error={{ content: 'Please enter your first name', pointing: 'below' }}
                         fluid
                         label='Kode'
+                        onClick={handleForm}
                         placeholder='Skriv inn koden din her'
                         id='form-input-first-name'
                      />

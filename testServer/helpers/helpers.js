@@ -25,16 +25,24 @@ const checkCode = (code) => {
          for (let i = 0; i < hotelData.length; i++) {
             let hotel = hotelData[i]
             //Match DataID from personAndCode with hotelData
+<<<<<<< HEAD
             if (data.hotelID === hotel.hotelID) {
                returnAnswer = {
                   Hotel: hotel,
                   Person: data
+=======
+            if(data.hotelID === hotel.hotelID) {
+               console.log('found....')
+              return returnAnswer = {
+                 person: data,
+                  hotel: hotel
+>>>>>>> 50677562490f044afd81ff8ce2e5f833288fe937
                }
             }
          }
       } else {
          returnAnswer = {
-            error: 'Det virker som koden ikke er riktig.'
+            error: 'Vi finner ingen info på denne koden, vennligst sjekk din kode og prøv igjen eller kontakt respesjonen for å få en ny kode.'
          }
       }
 
