@@ -27,9 +27,10 @@ const checkCode = (code) => {
             let hotel = hotelData[i]
             //Match DataID from personAndCode with hotelData
             if(data.hotelID === hotel.hotelID) {
-               returnAnswer = {
-                  Hotel: hotel,
-                  Person: data
+               console.log('found....')
+              return returnAnswer = {
+                 person: data,
+                  hotel: hotel
                }
             }
          }
@@ -39,7 +40,7 @@ const checkCode = (code) => {
          
       } else {
          returnAnswer = {
-            error: 'Det virker som koden ikke er riktig.'
+            error: 'Vi finner ingen info på denne koden, vennligst sjekk din kode og prøv igjen eller kontakt respesjonen for å få en ny kode.'
          }
       }
 
