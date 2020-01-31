@@ -1,12 +1,21 @@
-import React, {useContext, useState} from 'react'
+import React, {useContext} from 'react'
 import { Step } from 'semantic-ui-react'
+import { useHistory } from "react-router-dom";
+
 import { AppContextData } from '../../Context/ContextData'
 
 
 export default function Stepper(props) {
    const {activeStepper, updateStepper } = useContext(AppContextData);
+   let history = useHistory()
+
+   // Update active click element, and route to correct view.
+   function handleClick (step) {
+      updateStepper(step)
+      history.push(`/login/${step}`)
+
+   }
    
-   console.log(activeStepper)
 
    return (
       <>
@@ -14,7 +23,7 @@ export default function Stepper(props) {
             <Step
                completed={false}
                active={activeStepper === 0}
-               onClick={() => updateStepper(0)}
+               onClick={() => handleClick(0)}
                link
             >
                <Step.Content>
@@ -25,7 +34,7 @@ export default function Stepper(props) {
 
             <Step
                active={activeStepper === 1}
-               onClick={() => updateStepper(1)}
+               onClick={() => handleClick(1)}
                disabled={activeStepper < 1}
                link
 
@@ -38,7 +47,7 @@ export default function Stepper(props) {
 
             <Step
                disabled={activeStepper < 2}
-               onClick={() => updateStepper(2)}
+               onClick={() => handleClick(2)}
                active={activeStepper === 2}
                link
             >

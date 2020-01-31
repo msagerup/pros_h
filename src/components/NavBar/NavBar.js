@@ -42,7 +42,7 @@ export default function NavBar() {
          <Login>{signedIn ? (
             null
          ) : (
-               <button onClick ={() => history.push('/login')}>Sign in</button>
+               <button onClick ={() => history.push('/login/0')}>Sign in</button>
             )}
          </Login>
          <MenuButton>

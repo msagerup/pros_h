@@ -37,7 +37,7 @@ export default function FirstStep() {
                      />
                   </Form>
                   <Button onClick={() => {
-                     history.push('/login/menu')
+                     history.push('/login/1')
                      updateStepper(1)
                   }
                   }>Neste</Button>

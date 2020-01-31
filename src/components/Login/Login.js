@@ -27,13 +27,13 @@ export default function Login() {
                
             </StatusBar>
             <Switch>
-            <Route exact path='/login/'>
+            <Route exact path='/login/0'>
                   <FirstStep />
                </Route>
-               <Route path='/login/menu'>
+               <Route path='/login/1'>
                   <SecondStep />
                </Route>
-               <Route path='/login/done'>
+               <Route path='/login/2'>
                   <ThirdStep />
                </Route>
             </Switch>

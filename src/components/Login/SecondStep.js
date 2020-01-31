@@ -30,7 +30,7 @@ export default function SecondStep() {
                      </Card.Description>
                      <MenuLoader />
                      <Button onClick={() => {
-                        history.push('/login/done')
+                        history.push('/login/2')
                         updateStepper(2)
                         
                      } }>Neste</Button>

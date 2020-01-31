@@ -56,7 +56,7 @@ export default function Home() {
                   <Card.Meta>[Room Service er tillgnenelig for ditt hotell]</Card.Meta>
                   <Card.Description>
                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta repudiandae doloribus possimus vitae, adipisci incidunt repellat minima deserunt exercitationem nesciunt?</p>
-                     <Button onClick={() => history.push('/login')}>Bestill nå</Button>
+                     <Button onClick={() => history.push('/login/0')}>Bestill nå</Button>
                   </Card.Description>
                </Card.Content>
             </Card>
