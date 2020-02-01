@@ -27,10 +27,10 @@ export default function Login() {
                
             </StatusBar>
             <Switch>
-            <Route exact path='/login/0'>
+            <Route exact path='/login'>
                   <FirstStep />
                </Route>
-               <Route path='/login/1'>
+               <Route exact path='/login/1/:code'>
                   <SecondStep />
                </Route>
                <Route path='/login/2'>

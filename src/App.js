@@ -51,7 +51,7 @@ function App() {
                         <Route path='/play'>
                            <PlayPin />
                         </Route>
-                        <Route path='/login/0'>
+                        <Route path='/login'>
                            <Login />
                         </Route>
                         <Route exact path='/' >

@@ -19,30 +19,23 @@ const checkCode = (code) => {
       let data = personAndCode[i];
       if (data.code === code) {
          // After matched code, get id from what Hotel it belongs to
-       
+
          //Loop trough HotelSet to get hotel matched to code
          console.log('dataID', data.hotelID)
          for (let i = 0; i < hotelData.length; i++) {
             let hotel = hotelData[i]
             //Match DataID from personAndCode with hotelData
-<<<<<<< HEAD
             if (data.hotelID === hotel.hotelID) {
-               returnAnswer = {
-                  Hotel: hotel,
-                  Person: data
-=======
-            if(data.hotelID === hotel.hotelID) {
                console.log('found....')
-              return returnAnswer = {
-                 person: data,
+               return returnAnswer = {
+                  person: data,
                   hotel: hotel
->>>>>>> 50677562490f044afd81ff8ce2e5f833288fe937
                }
             }
          }
       } else {
          returnAnswer = {
-            error: 'Vi finner ingen info på denne koden, vennligst sjekk din kode og prøv igjen eller kontakt respesjonen for å få en ny kode.'
+            error: `Vi finner ingen info på denne koden: ${code}, vennligst sjekk din kode og prøv igjen eller kontakt respesjonen for å få en ny kode.`
          }
       }
 

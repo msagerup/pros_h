@@ -46,13 +46,13 @@ export default function SecondStep() {
                <Image src={menuImg} size="large" />
                <Card.Content>
                   <Card.Header> 
-                     {menuAndPersonInfo ? (
-                        `Hei ${menuAndPersonInfo.person.reference} `
+                     {menuAndPersonInfo.person ? (
+                        `Hei ${menuAndPersonInfo.person.reference}. `
                      ) : (
                         'Beklager, det har skjedd noe feil ved lasting av data'
                      )
                   }
-                      da er vi litt bedre kjendt!</Card.Header>
+                      Da har vi litt litt bedre kjendt!</Card.Header>
                   <Card.Meta>[Det er mulig å bestille] [Det er ikke mulig å bestille]</Card.Meta>
                   <Card.Description>
                      <h3>Nedefor finner du menyen fra [Hotell navn] </h3>
